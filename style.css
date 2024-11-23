@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #34495e;
+    text-align: center;
+    font-size: 2.5em; 
+}
+
+.container {
+    background: white;
+    border-radius: 20px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    width: 90%; 
+   
+    max-width: 500px; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; 
+}
+
+.title-left, .title-right {
+    font-size: 1.8em; 
+    color: #2980b9; 
+}
+
+.screen {
+    background: linear-gradient(135deg, #2c3e50, #34495e); 
+    color: #ecf0f1; 
+    padding: 50px; 
+    border-radius: 15px; 
+    text-align: right;
+    font-size: 3.5em; 
+    margin-bottom: 30px; 
+    overflow: hidden;
+}
+
+.touch {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes pour les boutons */
+    gap: 10px; /* Espacement entre les boutons */
+    justify-items: center; /* Centre les boutons horizontalement */
+}
+
+.button {
+    width: 95px; 
+    height: 80px; 
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    border: none;
+    border-radius: 15px; 
+    font-size: 2em;
+    color: white; 
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    transform: scale(1.05);
+}
+
+.button.operator {
+    background: linear-gradient(135deg, #1abc9c, #16a085); 
+}
+
+.button.operator:hover {
+    background: linear-gradient(135deg, #16a085, #1abc9c); 
+}
+
+.button.clear {
+    background: linear-gradient(135deg, #e74c3c, #c0392b); 
+}
+
+.button.clear:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c); 
+}
+
+.wrapper {
+    height: 10vh;
+    display: grid;
+    place-items: center; 
+}
+
+.typing-demo {
+    width: 45ch; 
+    animation: typing 5s steps(47), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 2em; 
+    color: #ecdbd3; 
+}
+
+@keyframes typing {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 50ch; 
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; 
+    }
+}
